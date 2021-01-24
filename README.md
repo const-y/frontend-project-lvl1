@@ -4,4 +4,4 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/676afa353607f457d063/maintainability)](https://codeclimate.com/github/const-y/frontend-project-lvl1/maintainability)
 
-![Linter](https://github.com/const-y/frontend-project-lvl1/workflows/Linter/badge.svg)
+[![Linter](https://github.com/const-y/frontend-project-lvl1/workflows/Linter/badge.svg)](https://github.com/const-y/frontend-project-lvl1/actions?query=workflow%3ALinter)
