@@ -1,37 +1,34 @@
 import { question } from 'readline-sync';
 import _ from 'lodash';
 
-const lower = 1;
-const upper = 100;
-const stages = 3;
+const LOWER = 1;
+const UPPER = 100;
+const STAGES = 3;
+const YES = 'yes';
+const NO = 'no';
 
 const isEven = (value) => value % 2 === 0;
 
-// returns true if answer is correct
-const isCorrect = (quest, even) => {
-  if (isEven(quest)) {
-    return even;
-  }
-  return !even;
+const generateQuestion = () => {
+  const value = _.random(LOWER, UPPER);
+  const correctAnswer = isEven(value) ? YES : NO;
+  return { value, correctAnswer };
 };
-
-const toBool = (str) => str === 'yes';
-
-const format = (boolValue) => (boolValue ? 'yes' : 'no');
 
 const game = (counter) => {
   if (counter === 0) {
     return true;
   }
-  const quest = _.random(lower, upper);
-  console.log('Question: ', quest);
-  const answer = toBool(question('Your answer: '));
-  if (isCorrect(quest, answer)) {
+  const { value, correctAnswer } = generateQuestion();
+  console.log('Question: ', value);
+  const answer = question('Your answer: ');
+  if (answer === correctAnswer) {
     console.log('Correct!');
     const newCounter = counter - 1;
     return game(newCounter);
   }
-  console.log(`'${format(answer)}' is wrong answer ;(. Correct answer was '${format(!answer)}'.`)
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  return false;
 };
 
 const brainEvenGame = () => {
@@ -39,7 +36,7 @@ const brainEvenGame = () => {
   const name = question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const win = game(stages);
+  const win = game(STAGES);
   if (win) {
     console.log(`Congratulations, ${name}!`);
   } else {
