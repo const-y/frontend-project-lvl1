@@ -4,7 +4,7 @@ import brainCalc from './games/brainCalc.js';
 
 const stagesCount = 3;
 
-const game = ({ generateQuestion }) => {
+const game = ({ description, generateQuestion }) => {
   const stage = (counter) => {
     if (counter === 0) {
       return true;
@@ -24,7 +24,7 @@ const game = ({ generateQuestion }) => {
   console.log('Welcome to the Brain Games!');
   const name = question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log(description);
   const win = stage(stagesCount);
   if (win) {
     console.log(`Congratulations, ${name}!`);
