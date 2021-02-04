@@ -1,14 +1,14 @@
-const UPPER = 100;
-const YES = 'yes';
-const NO = 'no';
+import { getRandomInt } from '../utils.js';
 
-const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
+const maxNumber = 100;
+const yes = 'yes';
+const no = 'no';
 
 const isEven = (value) => value % 2 === 0;
 
 const generateQuestion = () => {
-  const value = getRandomInt(UPPER);
-  const correctAnswer = isEven(value) ? YES : NO;
+  const value = getRandomInt(maxNumber);
+  const correctAnswer = isEven(value) ? yes : no;
   return { value, correctAnswer };
 };
 

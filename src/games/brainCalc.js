@@ -1,9 +1,9 @@
-const maxNumber = 100;
+import { getRandomInt } from '../utils.js';
+
+const maxNumber = 10;
 const plus = '+';
 const mult = '*';
 const minus = '-';
-
-const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
 const getRandomOperator = () => {
   const index = getRandomInt(2);
