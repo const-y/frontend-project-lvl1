@@ -1,6 +1,6 @@
 import { getRandomInt } from '../utils.js';
 
-const maxNumber = 10;
+const maxNumber = 100;
 const plus = '+';
 const mult = '*';
 const minus = '-';
