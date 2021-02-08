@@ -1,6 +1,5 @@
 import { getRandomInt } from '../utils.js';
 
-const maxNumber = 100;
 const plus = '+';
 const mult = '*';
 const minus = '-';
@@ -25,8 +24,8 @@ const calculate = (a, b, operator) => {
 
 const generateQuestion = () => {
   const operator = getRandomOperator();
-  const a = getRandomInt(maxNumber);
-  const b = getRandomInt(maxNumber);
+  const a = getRandomInt();
+  const b = getRandomInt();
   const value = `${a} ${operator} ${b}`;
   const correctAnswer = String(calculate(a, b, operator));
   return { value, correctAnswer };

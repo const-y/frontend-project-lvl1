@@ -1,7 +1,5 @@
 import { getRandomInt } from '../utils.js';
 
-const maxNumber = 100;
-
 const gcd = (a, b) => {
   if (!b) {
     return a;
@@ -11,8 +9,8 @@ const gcd = (a, b) => {
 };
 
 const generateQuestion = () => {
-  const a = getRandomInt(maxNumber);
-  const b = getRandomInt(maxNumber);
+  const a = getRandomInt();
+  const b = getRandomInt();
   const value = `${a} ${b}`;
   const correctAnswer = String(gcd(a, b));
   return { value, correctAnswer };
