@@ -1,6 +1,4 @@
 import { question } from 'readline-sync';
-import brainEven from './games/brainEven.js';
-import brainCalc from './games/brainCalc.js';
 
 const stagesCount = 3;
 
@@ -33,7 +31,4 @@ const game = ({ description, generateQuestion }) => {
   }
 };
 
-export default {
-  brainEven: () => game(brainEven),
-  brainCalc: () => game(brainCalc),
-};
+export default game;
