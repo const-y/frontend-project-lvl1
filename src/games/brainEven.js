@@ -1,7 +1,5 @@
-import { getRandomInt } from '../utils.js';
-
-const yes = 'yes';
-const no = 'no';
+import getRandomInt from '../getRandomInt.js';
+import { yes, no } from '../constants';
 
 const isEven = (value) => value % 2 === 0;
 
