@@ -8,7 +8,7 @@ const game = ({ description, generateQuestion }) => {
       return true;
     }
     const { value, correctAnswer } = generateQuestion();
-    console.log('Question: ', value);
+    console.log(`Question: ${value}`);
     const answer = question('Your answer: ');
     if (answer === correctAnswer) {
       console.log('Correct!');
