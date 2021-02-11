@@ -13,7 +13,7 @@ const stage = (generateQuestion, counter) => {
   if (answer === correctAnswer) {
     console.log('Correct!');
     const newCounter = counter - 1;
-    return stage(newCounter);
+    return stage(generateQuestion, newCounter);
   }
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   return false;
