@@ -1,5 +1,5 @@
 import getRandomInt from '../getRandomInt.js';
-import { yes, no } from '../constants.js';
+import { yes, no } from '../index.js';
 
 const isPrime = (num) => {
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
