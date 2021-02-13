@@ -22,16 +22,17 @@ const calculate = (a, b, operator) => {
   }
 };
 
-const generateQuestion = () => {
+const generateQuestionAnswerPair = () => {
   const operator = getRandomOperator();
   const a = getRandomInt();
   const b = getRandomInt();
-  const value = `${a} ${operator} ${b}`;
-  const correctAnswer = String(calculate(a, b, operator));
-  return { value, correctAnswer };
+  return {
+    question: `${a} ${operator} ${b}`,
+    correctAnswer: String(calculate(a, b, operator)),
+  };
 };
 
 export default {
   description: 'What is the result of the expression?',
-  generateQuestion,
+  generateQuestionAnswerPair,
 };

@@ -8,15 +8,16 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const generateQuestion = () => {
+const generateQuestionAnswerPair = () => {
   const a = getRandomInt();
   const b = getRandomInt();
-  const value = `${a} ${b}`;
-  const correctAnswer = String(gcd(a, b));
-  return { value, correctAnswer };
+  return {
+    value: `${a} ${b}`,
+    correctAnswer: String(gcd(a, b)),
+  };
 };
 
 export default {
   description: 'Find the greatest common divisor of given numbers.',
-  generateQuestion,
+  generateQuestionAnswerPair,
 };

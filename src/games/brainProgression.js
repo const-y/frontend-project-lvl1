@@ -10,17 +10,19 @@ const arithmeticalProgression = (length, d) => {
   return result;
 };
 
-const generateQuestion = () => {
+const generateQuestionAnswerPair = () => {
   const length = 10;
-  const d = getRandomInt();
+  const dif = getRandomInt();
   const hiddenIndex = getRandomInt(length - 1);
-  const regression = arithmeticalProgression(length, d);
-  const value = regression.map((item, index) => (index === hiddenIndex ? '..' : item)).join(' ');
-  const correctAnswer = String(regression[hiddenIndex]);
-  return { value, correctAnswer };
+  const progression = arithmeticalProgression(length, dif);
+  const question = progression.map((item, index) => (index === hiddenIndex ? '..' : item)).join(' ');
+  return {
+    question,
+    correctAnswer: String(progression[hiddenIndex]),
+  };
 };
 
 export default {
   description: 'What number is missing in the progression?',
-  generateQuestion,
+  generateQuestionAnswerPair,
 };
