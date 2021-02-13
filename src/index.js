@@ -21,7 +21,7 @@ const stage = (generateQuestion, counter) => {
   return false;
 };
 
-const game = ({ description, generateQuestion }) => {
+const play = ({ description, generateQuestion }) => {
   console.log('Welcome to the Brain Games!');
   const name = question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -34,4 +34,4 @@ const game = ({ description, generateQuestion }) => {
   }
 };
 
-export default game;
+export default play;
