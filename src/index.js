@@ -1,5 +1,4 @@
 import { question } from 'readline-sync';
-import sayHello from './cli.js';
 
 export const yes = 'yes';
 export const no = 'no';
@@ -24,7 +23,8 @@ const stage = (generateQuestion, counter) => {
 
 const game = ({ description, generateQuestion }) => {
   console.log('Welcome to the Brain Games!');
-  const name = sayHello();
+  const name = question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log(description);
   const win = stage(generateQuestion, stagesCount);
   if (win) {
