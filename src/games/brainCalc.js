@@ -1,21 +1,19 @@
 import getRandomInt from '../getRandomInt.js';
 
-const plus = '+';
-const mult = '*';
-const minus = '-';
+const operations = ['+', '*', '-'];
 
 const getRandomOperator = () => {
-  const index = getRandomInt(2);
-  return [plus, mult, minus][index];
+  const index = getRandomInt(operations.length - 1);
+  return operations[index];
 };
 
 const calculate = (a, b, operator) => {
   switch (operator) {
-    case plus:
+    case '+':
       return a + b;
-    case mult:
+    case '*':
       return a * b;
-    case minus:
+    case '-':
       return a - b;
     default:
       throw Error('Неизвестный оператор');
