@@ -1,20 +1,20 @@
 import getRandomInt from '../getRandomInt.js';
 
-const calculateProgression = (start, length, dif) => {
+const calculateProgression = (start, length, diff) => {
   const result = [];
   let current = start;
   while (result.length < length) {
     result.push(current);
-    current += dif;
+    current += diff;
   }
   return result;
 };
 
 const generateQuestionAnswerPair = () => {
   const length = 10;
-  const dif = getRandomInt();
+  const diff = getRandomInt();
   const hiddenIndex = getRandomInt(length - 1);
-  const progression = calculateProgression(getRandomInt(), length, dif);
+  const progression = calculateProgression(getRandomInt(), length, diff);
   const question = progression.map((item, index) => (index === hiddenIndex ? '..' : item)).join(' ');
   return {
     question,
