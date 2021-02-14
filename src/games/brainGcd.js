@@ -12,7 +12,7 @@ const generateQuestionAnswerPair = () => {
   const a = getRandomInt();
   const b = getRandomInt();
   return {
-    value: `${a} ${b}`,
+    question: `${a} ${b}`,
     correctAnswer: String(gcd(a, b)),
   };
 };
