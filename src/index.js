@@ -1,8 +1,5 @@
 import { question } from 'readline-sync';
 
-export const yes = 'yes';
-export const no = 'no';
-
 const stagesCount = 3;
 
 const stage = (generateQuestionAnswer, counter) => {

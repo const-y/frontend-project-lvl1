@@ -1,5 +1,4 @@
 import getRandomInt from '../getRandomInt.js';
-import { yes, no } from '../index.js';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -15,7 +14,7 @@ const generateQuestionAnswer = () => {
   const question = getRandomInt();
   return {
     question,
-    correctAnswer: isPrime(question) ? yes : no,
+    correctAnswer: isPrime(question) ? 'yes' : 'no',
   };
 };
 
