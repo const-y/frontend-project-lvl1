@@ -16,7 +16,7 @@ const calculate = (a, b, operator) => {
     case '-':
       return a - b;
     default:
-      throw Error('Неизвестный оператор');
+      throw Error(`Unknown operator ${operator}`);
   }
 };
 
