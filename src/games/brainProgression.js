@@ -10,7 +10,7 @@ const calculateProgression = (start, length, diff) => {
   return result;
 };
 
-const generateQuestionAnswerPair = () => {
+const generateQuestionAnswer = () => {
   const length = 10;
   const diff = getRandomInt();
   const hiddenIndex = getRandomInt(length - 1);
@@ -24,5 +24,5 @@ const generateQuestionAnswerPair = () => {
 
 export default {
   description: 'What number is missing in the progression?',
-  generateQuestionAnswerPair,
+  generateQuestionAnswer,
 };

@@ -20,7 +20,7 @@ const calculate = (a, b, operator) => {
   }
 };
 
-const generateQuestionAnswerPair = () => {
+const generateQuestionAnswer = () => {
   const operator = getRandomOperator();
   const a = getRandomInt();
   const b = getRandomInt();
@@ -32,5 +32,5 @@ const generateQuestionAnswerPair = () => {
 
 export default {
   description: 'What is the result of the expression?',
-  generateQuestionAnswerPair,
+  generateQuestionAnswer,
 };

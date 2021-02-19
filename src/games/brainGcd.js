@@ -8,7 +8,7 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const generateQuestionAnswerPair = () => {
+const generateQuestionAnswer = () => {
   const a = getRandomInt();
   const b = getRandomInt();
   return {
@@ -19,5 +19,5 @@ const generateQuestionAnswerPair = () => {
 
 export default {
   description: 'Find the greatest common divisor of given numbers.',
-  generateQuestionAnswerPair,
+  generateQuestionAnswer,
 };

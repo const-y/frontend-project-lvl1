@@ -3,7 +3,7 @@ import { yes, no } from '../index.js';
 
 const isEven = (value) => value % 2 === 0;
 
-const generateQuestionAnswerPair = () => {
+const generateQuestionAnswer = () => {
   const question = getRandomInt();
   return {
     question,
@@ -13,5 +13,5 @@ const generateQuestionAnswerPair = () => {
 
 export default {
   description: 'Answer "yes" if the number is even, otherwise answer "no".',
-  generateQuestionAnswerPair,
+  generateQuestionAnswer,
 };
